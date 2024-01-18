@@ -45,3 +45,6 @@ docker compose -f docker-compose.prod.yml up -d --build
 ```
 
 Now, you can access the production server at http://localhost:85.
+
+> Note:
+> Every time you change the source code, you need to rebuild the image by running the above command again.
