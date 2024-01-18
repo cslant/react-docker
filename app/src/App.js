@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React rsdhtfdshg esg rtehr
+          Learn React with <span style={{color: 'red'}}>Docker</span>
         </a>
       </header>
     </div>

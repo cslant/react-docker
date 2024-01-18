@@ -6,7 +6,7 @@ WORKDIR /app
 COPY ./app/package.json .
 #COPY yarn.lock .
 
-RUN npm i
+RUN npm i && npm cache clean --force
 
 COPY ./app .
 
