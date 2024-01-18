@@ -1,5 +1,7 @@
 # Docker for React
 
+This is a simple docker configuration for React. It is suitable for both development and production environments.
+
 ## For development
 
 First, update the **APP_CONTAINER_NAME** and **APP_PORT** variables in the .env file if you want to change the container name and the port number.
