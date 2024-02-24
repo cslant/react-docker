@@ -6,8 +6,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - APP_FOLDER_NAME=${APP_FOLDER_NAME:-app}
     volumes:
-      - ./app/src:/app/src
+      - ./${APP_FOLDER_NAME:-app}/src:/app/src
     ports:
       - "${APP_PORT:-3000}:3000"
     tty: true

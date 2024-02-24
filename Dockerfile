@@ -1,14 +1,16 @@
 FROM node:21-alpine AS development
 ENV NODE_ENV development
 
+ARG APP_FOLDER_NAME="app"
+
 WORKDIR /app
 
-COPY ./app/package.json .
+COPY ./${APP_FOLDER_NAME}/package.json .
 #COPY yarn.lock .
 
 RUN npm i && npm cache clean --force
 
-COPY ./app .
+COPY ./${APP_FOLDER_NAME} .
 
 EXPOSE 3000
 
