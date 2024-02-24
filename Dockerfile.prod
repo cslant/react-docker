@@ -1,14 +1,16 @@
 FROM node:21-alpine AS builder
 ENV NODE_ENV production
 
+ARG APP_FOLDER_NAME="app"
+
 WORKDIR /app
 
-COPY ./app/package.json .
+COPY ./${APP_FOLDER_NAME}/package.json .
 #COPY yarn.lock .
 
 RUN npm i && npm cache clean --force
 
-COPY ./app .
+COPY ./${APP_FOLDER_NAME} .
 
 # Build the app
 RUN npm run build

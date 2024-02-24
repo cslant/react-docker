@@ -6,5 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
+      args:
+          - APP_FOLDER_NAME=${APP_FOLDER_NAME:-app}
     ports:
       - "${PROD_APP_PORT:-80}:80"
